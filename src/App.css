@@ -1,0 +1,93 @@
+* {
+
+    /* Reset CSS */
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    color: #0c0c0c;
+}
+
+
+/* Home */
+
+
+.container {
+    height: 100vh;
+    background-color: rgb(238, 220, 220);
+}
+
+.container > h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > p {
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+.container_form {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.container_form > form {
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+.container_form > form > label {
+    display: flex;
+}
+
+.container_form > form > input {
+    border-radius: 5px;
+    padding-inline-start: 4px;
+    height: 22px;
+    display: flex;
+    margin-top: 5px;
+}
+
+.container_form > form > button {
+    margin-top: 10px;
+    height: 22px;
+    width: 48px;
+    border-radius: 5px;
+    background-color: gray;
+    cursor: pointer;
+}
+
+
+
+/* Success "login" */
+
+.container_welcome {
+
+    margin-top: 20px;
+}
+
+.container_welcome > p {
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.container_welcome > span,
+.container_welcome > span > strong {
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.container_welcome p:nth-last-child(2){
+    margin-top: 10px;
+}
+
+.container_welcome > button {
+    margin-top: 10px;
+    margin-left: 5px;
+    height: 22px;
+    width: 48px;
+    border-radius: 5px;
+    background-color: gray;
+    cursor: pointer;
+}
