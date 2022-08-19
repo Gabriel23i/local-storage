@@ -1,6 +1,9 @@
 import { useForm } from "react-hook-form";
 import { useState } from 'react';
 
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.min.css';
+
 import './App.css';
 
 function App() {
@@ -9,6 +12,8 @@ function App() {
   const [welcome, setWelcome] = useState(false);
   const [name, setName] = useState('');
 
+  
+
   const checkUser = () => {
     const userName = localStorage.getItem("name");
     
@@ -16,6 +21,8 @@ function App() {
       setWelcome(true);
       const userNameConverted = JSON.parse(userName);
       setName(userNameConverted.name);
+      toast.success(`Bem-vindo ${userNameConverted.name}`)
+
     } else{
       setWelcome(false);
     }
@@ -34,6 +41,7 @@ function App() {
     localStorage.removeItem("name");
     setName('');
     checkUser();
+    toast.info('Dados removidos com sucesso!')
   }
 
   return (
@@ -75,6 +83,7 @@ function App() {
           </button>
         </div>
       )}
+    <ToastContainer />
     </div>
   );
 }
